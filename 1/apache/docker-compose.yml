@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  php-apache:
+    build: 
+      context: .
+    ports:
+      - "8091:80"
+      - "9000:9000"
+    volumes:
+      - .:/var/www/html

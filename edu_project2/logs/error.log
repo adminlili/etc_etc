@@ -1,0 +1,1 @@
+2021/02/13 20:21:41 [error] 21#21: *4 open() "/var/www/hello.test/favicon.ico" failed (2: No such file or directory), client: 172.24.0.1, server: hello.test, request: "GET /favicon.ico HTTP/1.1", host: "hello.test:8000", referrer: "http://hello.test:8000/"

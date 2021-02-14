@@ -1,0 +1,48 @@
+    version: '2'
+    services:
+      nginx:
+        image: nginx:latest
+        ports:
+          - "8000:80"
+        volumes:
+          - ./hosts:/etc/nginx/conf.d
+          - ./www:/var/www
+          - ./logs:/var/log/nginx
+        links:
+          - php
+      php:
+        build: ./images/php
+        volumes:
+          - ./www:/var/www
+        links:
+          - mysql
+      mysql:
+        image: mysql:latest
+        cap_add:
+          - SYS_NICE 
+#        command: bash -c "mysql -h localhost -P 3306 -uroot -proot mysql  < /etc/mysql/dump1.sql" 
+#           bash -c "mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci"
+        ports:
+          - "3307:3306"
+        volumes:
+          - ./mysql:/var/lib/mysql
+          - ./etc_mysql/dump1.sql:/etc/mysql/dump1.sql
+        environment:
+          MYSQL_ROOT_HOST: '%'
+          MYSQL_DATABASE: 'db'
+          MYSQL_USER: 'admin'
+          MYSQL_PASSWORD: 'admin_pass'
+          MYSQL_ROOT_PASSWORD: 'root'
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      pma:
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        links:
+          - mysql:mysql
+        ports:
+          - 8001:80
+        environment:
+          PMA_HOST: mysql
+          MYSQL_USERNAME: root
+          MYSQL_ROOT_PASSWORD: root
+

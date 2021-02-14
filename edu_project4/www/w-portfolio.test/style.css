@@ -1,0 +1,236 @@
+﻿@font-face {
+    font-family: Corbel; 
+    src: local("corbel"),
+         local("Corbel"), 
+         local("CORBEL"), 
+         url(fonts/corbel.ttf); 
+}
+
+
+@font-face {
+    font-family: Calibri; 
+    src: local("calibri"),
+         local("Calibri"), 
+         local("CALIBRI"), 
+         url(fonts/calibri.ttf); 
+}
+
+@font-face {
+    font-family: Georgia; 
+    src: local("georgia"),
+         local("Georgia"), 
+         local("GEORGIA"), 
+         url(fonts/georgia.ttf); 
+}
+
+
+@font-face {
+    font-family: HeinrichScript; 
+    src: url(fonts/HeinrichScript.eot); 
+}
+
+@font-face {
+    font-family: HeinrichScript; 
+    src: url(fonts/HeinrichScript.ttf); 
+}
+
+
+/* CSS layout */
+body, div, img, h1, h2, h3, h4, h5, h6, table, tr, td, a, span, ol, ul, li {
+    margin: 0;
+	padding: 0;
+    font-family: Corbel,Calibri;
+    font-size: medium;
+    font-weight: normal;
+    color: black;
+    border: none;
+    z-index: 0;
+}
+
+body {
+    background-color: #E8E6E9;
+    overflow-y: scroll;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 960px;
+    position: relative;
+    left: 50%;
+    margin-left: -480px;
+}
+
+.clear {
+    clear: both !important;
+}
+
+#header {
+    width: 960px;
+    height: 100px;
+    margin-top: 50px;
+}
+
+#portfolio {
+    font-family: Georgia; 
+    font-size: x-large;        
+    font-style: italic;
+    font-weight: bold;
+    color: gray;
+}
+
+#fio {
+    font-family: Georgia; 
+    font-size: x-large;    
+    font-style: italic;
+}
+
+#slogan {
+    position: absolute;
+    margin: 0 0 0 650px;
+    font-size: large;
+    font-style: italic;
+    color: gray;
+}
+
+#main-menu {
+    margin-top: 20px;
+}
+
+#main-menu a {
+    float: left;
+    margin-right: 30px;
+    font-family: HeinrichScript; 
+    font-size: x-large;
+    font-weight: bold;
+    color: gray;
+    text-decoration: none;
+}
+
+#main-menu a:hover {
+    color: steelblue;
+    text-decoration: underline;
+}
+
+#main-menu a.selected {
+    color: black;
+    text-decoration: underline;
+}
+
+
+
+.line {
+    width: 940px;
+    height: 1px;
+    border-bottom: solid 1px #DCDBE0;
+}
+
+#menu {
+    position: absolute;
+    list-style: none;
+}
+
+#menu li {
+    font-family: Georgia;
+    font-size: large;
+    font-style: italic;
+    color: gray;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#menu li:hover {
+    color: steelblue;
+    text-decoration: underline;
+}
+
+#menu li.selected {
+    color: navy;
+    text-decoration: underline;
+}
+
+#v-line {
+    position: absolute;
+    width: 10px;
+    height: 525px;
+    margin: 0 40px 0 280px;
+    background-image: url(images/v-line.png);
+}
+
+.content {
+    position: absolute;
+    margin-left: 350px;
+    display: none;
+    max-width: 550px;
+}
+
+.content .description {
+    margin-top: 20px;
+    font-family: Calibri;
+    text-align: left;
+    width: 550px;
+    font-size: large;
+}
+
+.content a {
+    display: block;
+    margin-top: 10px;
+    color: steelblue;
+    font-size: large;
+    font-family: Corbel;
+}
+
+.content img {
+    margin-top: 10px;
+    max-width: 550px;
+    border: solid 1px gray;
+}
+
+.image {
+    width: auto;
+    color: orange;
+    font-size: large;
+    font-family: Corbel;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.image:hover {
+    color: silver;
+}
+
+#practice {
+    font-family: Calibri;
+    font-size: large;
+    text-align: justify;
+}
+
+#practice-list {
+    list-style: none;
+    list-style-image: url(images/gal.png);
+    margin-left: 50px;
+}
+
+#practice-list li {
+    font-family: Calibri;
+    font-size: large;
+    padding-left: 5px;
+}
+
+#footer {
+    width: 960px;
+    height: 100px;
+}
+
+#contact {
+    font-size: large;
+    font-family: Georgia;
+    font-style: italic;
+}
+
+/*    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    behavior: url(include/PIE.htc);
+*/
+

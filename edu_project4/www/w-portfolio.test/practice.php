@@ -1,0 +1,1 @@
+<?php    require_once('html/header.inc');    require_once('html/practice.inc');    require_once('html/footer.inc');?>

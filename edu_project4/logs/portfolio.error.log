@@ -1,0 +1,1 @@
+2021/02/13 21:43:46 [error] 21#21: *4 open() "/var/www/w-portfolio.test/favicon.ico" failed (2: No such file or directory), client: 172.26.0.1, server: w-portfolio.test, request: "GET /favicon.ico HTTP/1.1", host: "w-portfolio.test:8002", referrer: "http://w-portfolio.test:8002/"

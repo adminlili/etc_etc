@@ -1,0 +1,1 @@
+2021/02/13 20:41:44 [error] 28#28: *2 open() "/var/www/default.test/favicon.ico" failed (2: No such file or directory), client: 172.25.0.1, server: default.test, request: "GET /favicon.ico HTTP/1.1", host: "default.test:8001", referrer: "http://default.test:8001/"
